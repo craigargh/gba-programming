@@ -83,6 +83,26 @@ int main(void) {
 VBLANK and interrupts
 
 
+```cpp
+#include <gba_interrupt.h>
+#include <gba_systemcalls.h>
+
+
+int main(void) {
+    irqInit();
+    irqEnable(IRQ_VBLANK);
+
+    // Game setup goes here
+
+    while (1){
+    	// Game logic and drawing goes here
+
+        VBlankIntrWait();
+    }
+}
+```
+
+
 Mode 3 has practical limitations
 
 Need to clear previous pixels
