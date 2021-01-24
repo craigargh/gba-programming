@@ -35,4 +35,4 @@
 *.gba
 *.elf
 *.sav
-*/build/
+build/
